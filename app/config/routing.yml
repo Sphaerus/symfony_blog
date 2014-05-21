@@ -1,0 +1,19 @@
+acme_store:
+    resource: "@AcmeStoreBundle/Resources/config/routing.yml"
+    prefix:   /
+AcmeStoreBundle_default_create:
+  pattern: /create
+  defaults: { _controller: AcmeStoreBundle:Default:create }
+  requirements:
+    _method: POST
+AcmeStoreBundle_default_show:
+    pattern:  /show/{id}
+    defaults: { _controller: AcmeStoreBundle:Default:show }
+    requirements:
+        _method:  GET
+        id: \d+		
+AcmeStoreBundle_default_new:
+    pattern:  /new
+    defaults: { _controller: AcmeStoreBundle:Default:new }
+    requirements:
+        _method:  GET

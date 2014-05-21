@@ -1,0 +1,13 @@
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block body %}
+    <article class="product">
+        <header>
+            <h2>{{ product.name }}</h2>
+        </header>
+        <div>
+						<p>{{ product.price }}</p>
+            <p>{{ product.description }}</p>
+        </div>
+    </article>
+{% endblock %}
